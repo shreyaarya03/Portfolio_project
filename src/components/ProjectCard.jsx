@@ -6,19 +6,19 @@ function ProjectCard({project}) {
       <div className="project-image">
         {
           project.image ? (
-            <img src={project.image} alt = {project.title}/>
+            <img src={project.image} alt={project.title} />
           ):(
-            <span className="image-placeholder">{project.tittle[0]}</span>
+            <span className="image-placeholder">{project.title[0]}</span>
           )
-}
+        }
       </div>
 
-      <h3>{project.image}</h3>
+      <h3>{project.title}</h3>
       <p className="muted">{project.description}</p>
 
       <div className="badges">
         {
-          project.technologies.mao((tech)=>(
+          project.technologies.map((tech)=>(
             <span className="badge small" key={tech}>{tech}</span>
           ))
         }

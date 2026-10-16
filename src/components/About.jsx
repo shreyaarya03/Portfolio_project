@@ -9,15 +9,14 @@ function About({data}) {
         </div>
 
         <div className="card">
-          <h3>Interest</h3>
+          <h3>Interests</h3>
           <div className="badges">
+            {
+              data.interests.map((item)=>(
+                <span className="badge" key={item}>{item}</span>
+              ))  
+            }
           </div>
-          {
-            data.interests.map((item)=>(
-              <span className = "badge" key ={item}>{item}</span>
-              
-            ))
-          }
         </div>
       </div>
     </section>
